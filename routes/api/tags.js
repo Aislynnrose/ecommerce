@@ -1,11 +1,10 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Tag, Product, ProductTag } = require('../../models');
 
-// The `/api/categories` endpoint
+// The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
+  // find all tags including associated product data
   tag.findAll({
     attribute: ['id', "tag-name"],
     include: [Product],
@@ -18,8 +17,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+  // find a single tag by its `id` inlcuding Product data
   Tag.findOne({
     where: {
       id: req.params.id,
@@ -44,7 +42,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // create a new category
+  // create a new tag
   Tag.create({
     tag_name: req.body.tag_name,
   })
@@ -56,7 +54,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  // update a tag's name by its `id` value
   Tag.update(req.body, {
     where: {
       id: req.params.id,
@@ -75,7 +73,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+  // delete on tag by its `id` value
   Tag.destroy({
     where: {
       id: req.params.id,
