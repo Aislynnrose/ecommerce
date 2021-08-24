@@ -25,7 +25,7 @@ THEN I am able to successfully create, update, and delete data in my database
 ```
   ## _GitHub URL_: https://github.com/Aislynnrose/ecommerce
 
-  ## _Preview URL_: 
+  ## _Preview URL_: https://drive.google.com/file/d/1yOdSz8EaQ0AWkIB7gK1KPLrkHwEYPYaQ/view
 
   ## _Email Me_: aislynn.rose@gmail.com
 
